@@ -13,8 +13,7 @@ import Auth from "../utils/auth";
 import { removeBookId } from "../utils/localStorage";
 
 const SavedBooks = () => {
-  const { loading, data } = useQuery(GET_ME);
-  const userData = data?.me || {};
+  const { loading, data: userData } = useQuery(GET_ME);
   const deleteBook = useMutation(DELETE_BOOK);
 
   const handleDeleteBook = async (bookId) => {
