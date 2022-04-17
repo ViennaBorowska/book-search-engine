@@ -9,7 +9,7 @@ const resolvers = {
         const userData = await User.findOne({ _id: context.user._id });
         return userData;
       }
-      throw new AuthenticationError("Please log in");
+      throw new AuthenticationError("Please log in!");
     },
   },
   Mutation: {
